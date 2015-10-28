@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: mpp-mycred\n"
-"POT-Creation-Date: 2015-08-18 01:57+0530\n"
-"PO-Revision-Date: 2015-08-18 01:58+0530\n"
-"Last-Translator: Brajesh Singh\n"
+"POT-Creation-Date: 2015-10-29 00:45+0530\n"
+"PO-Revision-Date: 2015-10-29 00:45+0530\n"
+"Last-Translator: BuddyDev.com\n"
 "Language-Team: BuddyDev Team\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,49 +14,49 @@ msgstr ""
 "X-Poedit-SearchPath-0: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-"
 "mycred\n"
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:21
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/mpp-my-cred.php:78
+msgid "MediaPress"
+msgstr ""
+
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/mpp-my-cred.php:79
+msgid ""
+"Award / Deduct %_plural% for users creating galleries or uploading new media."
+msgstr ""
+
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:21
 #, php-format
 msgid "for new %s upload"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:27
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:27
 #, php-format
 msgid "for %s deletion"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:166
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:186
 #, php-format
 msgid "<strong>%s</strong> upload"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:170
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:190
 msgid "Points"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:177
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:197
 msgid "Limit"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:182
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:206
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:202
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:226
 msgid "Log template"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:197
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:217
 #, php-format
 msgid "<strong>%s</strong> delete"
 msgstr ""
 
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/class-mycred-actions-helper.php:201
+#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/core/actions.php:221
 #, php-format
 msgid "Delete %s "
-msgstr ""
-
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/mpp-my-cred.php:77
-msgid "MediaPress"
-msgstr ""
-
-#: /var/www/bp/dev/mediapress/dev/wp-content/plugins/mpp-mycred/mpp-my-cred.php:78
-msgid ""
-"Award / Deduct %_plural% for users creating galleries or uploading new media."
 msgstr ""
