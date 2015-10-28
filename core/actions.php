@@ -46,15 +46,24 @@ class MPP_myCRED_Actions_Helper extends myCRED_Hook {
 	public function run() {
 		//try adding points when a new media is added
 		add_action( 'mpp_media_added',     array( $this, 'new_media' ), 10, 2 );
+		add_action( 'mpp_activity_media_marked_attached',     array( $this, 'on_activity_upload' ), 10);
 		//try deducting points when a media is deleted
 		add_action( 'mpp_delete_media', array( $this, 'delete_media' ) );
 		
+		
 	}
 	
-	public function new_media( $media_id, $gallery_id ) {
+	public function new_media( $media_id, $gallery_id = null ) {
 		
 		$media = mpp_get_media( $media_id );
 		
+		
+		if( ! $media  || $media->is_orphan ) {
+			return ;
+		}
+		
+		//activity uploads not yet attached with post should not give any point
+				
 		//Don't add for excluded users
 		if ( $this->core->exclude_user( $media->user_id ) === true ) {
 			return;
@@ -66,6 +75,7 @@ class MPP_myCRED_Actions_Helper extends myCRED_Hook {
 		if ( empty( $type ) ) {
 			return ;
 		};
+		
 		//key=> add_photo|add_video etc
 		$key = 'add_'. $type;
 
@@ -81,7 +91,7 @@ class MPP_myCRED_Actions_Helper extends myCRED_Hook {
 		if ( $this->over_hook_limit( $key, $ref , $media->user_id ) ) {
 			return ;
 		}
-		// Make sure this is unique, i truly don't understand it and will not tr to understand
+		// Make sure this is unique, I truly don't understand it and will not try to understand
 		if ( $this->core->has_entry( $ref, $media->user_id, $media->id ) ) {
 			return ;
 		}
@@ -98,6 +108,16 @@ class MPP_myCRED_Actions_Helper extends myCRED_Hook {
 		);
 
 			
+	}
+	/**
+	 * Give points when activity uploaded media is marked as attached
+	 * 
+	 * @param type $media_ids
+	 */
+	public function on_activity_upload( $media_ids ) {
+		foreach( $media_ids as $media_id ) {
+			$this->new_media( $media_id );
+		}
 	}
 	/**
 	 * Runs just before deleting media

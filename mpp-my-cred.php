@@ -1,10 +1,11 @@
 <?php
 /**
- * Plugin Name: MediaPress myCRED Addon
+ * Plugin Name: MediaPress - myCRED Addon
  * Plugin URI: http://buddydev.com/plugins/mpp-mycred/
  * Version: 1.0.0
  * Author: BuddyDev Team
  * Author URI: http://buddydev.com
+ * Description: Give points to users for their media upload using myCRED
  * License: GPL
  * 
  */
@@ -61,7 +62,7 @@ class MPP_myCRED_Helper {
 		$path = plugin_dir_path( __FILE__ );
 
 		if( class_exists( 'myCRED_Hook' ) ) {	
-			require_once  $path . 'class-mycred-actions-helper.php';
+			require_once  $path . 'core/actions.php';
 		}
 	}
 
